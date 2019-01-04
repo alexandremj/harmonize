@@ -8,7 +8,8 @@ HELP_TEXT = """ usage: python main.py tonic scale_1 scale_2 ... scale_n
                     
                     scales currently supported:
                         mj - major scale
-                        min - minor natural scale"""
+                        min - minor natural scale
+                        mih - minor harmonic scale"""
 
 def main():
     if len(sys.argv) < 2:
@@ -28,6 +29,8 @@ def main():
             field.major_scale()
         elif command == 'min':
             field.minor_natural_scale()
+        elif command == 'mih':
+            field.minor_harmonic_scale()
 
 if __name__ == '__main__':
     main()
