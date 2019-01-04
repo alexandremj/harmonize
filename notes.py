@@ -16,4 +16,9 @@ class Notes(Enum):
     B = 12
 
     def __add__(self, other):
-        return Notes((self.value + other) % 12)
+        sum_ = self.value + other
+
+        if sum_ > 12:
+            sum_ = (sum_ % 12) + 1
+
+        return Notes(sum_)

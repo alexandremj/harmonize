@@ -1,9 +1,8 @@
 import sys
 from notes import Notes
+from harmonic_field import HarmonicField
 
 def main():
-    print('Welcome to Harmonize!')
-    
     if len(sys.argv) < 2:
         print('help text - no arguments')
         exit()
@@ -13,7 +12,8 @@ def main():
         exit()
     
     tonic = Notes[sys.argv[1]]
-    print(tonic)
+    field = HarmonicField(tonic)
+    print(field.major_natural_scale())
 
 if __name__ == "__main__":
     main()
