@@ -19,6 +19,6 @@ class Notes(Enum):
         sum_ = self.value + other
 
         if sum_ > 12:
-            sum_ = (sum_ % 12) + 1
+            sum_ = (sum_ % 12)
 
         return Notes(sum_)
