@@ -6,7 +6,7 @@ class HarmonicField():
         self.tonic = tonic
     
     """ Generates the Major Scale of the given tonic
-        and returns a 7-tuple containing the notes """
+        and returns a dictionary containing the notes """
     def major_natural_scale(self):
         scale = {}
         scale['first_degree'] = self.tonic
